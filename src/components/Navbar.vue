@@ -2,18 +2,20 @@
   <nav class="bg-white shadow p-4 sticky top-0 z-50">
     <div class="flex justify-between items-center">
       <!-- Logo -->
-      <img
-        src="../assets/RoteiroIbiapaba.png"
-        alt="Logo"
-        class="h-12 w-auto"
-      />
+      <router-link to="/" class="flex items-center">
+        <img
+          src="../assets/RoteiroIbiapaba.png"
+          alt="Logo"
+          class="h-12 w-auto"
+        />
+      </router-link>
 
       <!-- Botão sanduíche no mobile -->
       <button
         @click="menuOpen = !menuOpen"
         class="md:hidden text-gray-800 focus:outline-none"
       >
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" >
           <path
             stroke-linecap="round"
             stroke-linejoin="round"
@@ -39,7 +41,7 @@
           <button @click="toggleDropdown" class="flex items-center space-x-2">
             <img
               :src="foto"
-              alt="Usuário"
+              
               class="w-8 h-8 rounded-full bg-gray-300 object-cover"
             />
             <span class="text-gray-700 font-medium">{{ username }}</span>
